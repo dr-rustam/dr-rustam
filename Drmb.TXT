@@ -1,0 +1,50 @@
+--------------------[Dr Rustam mutant Batch ]-------------------------------
+
+-----------------------------------%<---------------------------------------------------
+
+%Drmb1%SET Y=%0
+:Drmb1
+%Drmb1%ECHO [USER CODE - 1]
+GOTO Drmb%Drmb1%2 
+:Drmb2
+%Drmb2%ECHO [USER CODE - 2]
+GOTO Drmb%Drmb2%3 
+:Drmb3
+%Drmb3%ECHO [USER CODE - 3]
+GOTO Drmb%Drmb3%4 
+:Drmb4
+%Drmb4%ECHO [USER CODE - 4]
+GOTO Drmb%Drmb4%5 
+:Drmb5
+%Drmb5%ECHO [USER CODE - 5]
+GOTO Drmb%Drmb5%6 
+:Drmb6
+%Drmb6%ECHO [USER CODE - 6]
+GOTO Drmb%Drmb6%7 
+:Drmb7
+%Drmb7%ECHO [USER CODE - 7]
+GOTO Drmb%Drmb7%8 
+:Drmb8
+%Drmb8%ECHO [USER CODE - 8]
+GOTO Drmb%Drmb8%9 
+:Drmb9
+%Drmb9%SET /A R=1+(9-1+1) * %RANDOM%/32768
+%Drmb9%FOR %%T IN (
+%A%;%B%;%C%;%D%;%E%;%F%;%G%;%H%;%I% %Drmb9%
+)DO IF %R%==%%T GOTO Drmb9
+%Drmb9%SET O=_ABCDEFGHI
+%Drmb9%SET /A T=%T%+1
+%Drmb9%CALL SET %%O:~%T%,1%%=%R%
+%Drmb9%CALL :DrmbX %R%
+IF NOT %T%==9 GOTO Drmb9
+EXIT %Drmb9%
+:DrmbX Drmb9
+FIND "Drmb%1"<%Y%>>POLY %Drmb9%
+GOTO :EOF %Drmb9%
+
+----------------------------%<------------------------------------------
+
+
+====-------=-==-===-----==
+| DR RUSTAM/VX BATCH LAB |
+====--=-====-----=-=-====-

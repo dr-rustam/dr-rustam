@@ -1,0 +1,1 @@
+Set /p SF=<%0 &FOR %%l IN (*.b?b) DO FIND "]-"<%%l || (CMD/V/C Echo:!SF!>_&TYPE %%l>>_&Type _>%%l)
